@@ -7,6 +7,12 @@ import io.quarkus.runtime.annotations.QuarkusMain;
 public class Application {
 
     public static void main(String... args) {
-        Quarkus.run(Day1.class, args);
+        if(args.length == 0) return;
+        var clazz  = switch (args[0]) {
+            case "day1" -> Day1.class;
+            case "day2" -> Day2.class;
+            default -> null;
+        };
+        Quarkus.run(clazz, args);
     }
 }

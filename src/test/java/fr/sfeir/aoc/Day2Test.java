@@ -5,23 +5,21 @@ import io.quarkus.test.junit.main.LaunchResult;
 import io.quarkus.test.junit.main.QuarkusMainTest;
 import org.junit.jupiter.api.Test;
 
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.is;
 import static org.junit.jupiter.api.Assertions.*;
 
 @QuarkusMainTest
-class Day1Test {
+class Day2Test {
 
     @Test
-    @Launch(value = {"day1", "part1"})
+    @Launch(value = {"day2", "part1"})
     void testPart1(LaunchResult result) {
-        assertEquals("7", result.getOutput());
+        assertEquals("150", result.getOutput());
     }
 
     @Test
-    @Launch(value = {"day1", "part2"})
+    @Launch(value = {"day2", "part2"})
     void testPart2(LaunchResult result) {
-        assertEquals("5", result.getOutput());
+        assertEquals("900", result.getOutput());
     }
 
 }
