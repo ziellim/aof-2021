@@ -11,6 +11,7 @@ public class Application {
         var clazz  = switch (args[0]) {
             case "day1" -> Day1.class;
             case "day2" -> Day2.class;
+            case "day3" -> Day3.class;
             default -> null;
         };
         Quarkus.run(clazz, args);
